@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "fusernow-rewards",
+  "private_key_id": "1f8763ad646557c1e786f0f70e5a644cc7fce9f3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDaeniQTELbhnDr\nDcogQIupEpZff7znEIRhrfZ7+epm4XyY16bSX9c/NGH8ae/Poq0WfD0Txmj8ZhyB\nZMhB9dOiGabQkqhNaNfcTBeg9i6qZouET4HAWPt1l3UQrw5u4gwvX7tJuGtvUTyx\nsR4hqlLOcT4O+0Srl7Y6ABJuPSleo0JLiVzDHf4Jk0Hxoao0iXGmKzC9qzSiFDR6\nCALueHsCSBmZ52u1T4Gr+i5GCA8i5fhHzKBkgOuWfrFCxSdcYo6ItNzJHclSmGt1\n6kCLe7237ta6AA1h6Aw8v4aVnBebzHr3t0GRoF5vknq4uh7BV8wjQpM3XkW933jR\njrPyOOZRAgMBAAECggEACNKtlAE6aXhfTsTEqwMESNiG8VYcpDWw7OtsMvNDpbI5\nOIhr9J65d/RW+S0zia5zgD8V7dqjQn8iq1CNPEmvyWHxEEb97DtdzUgW47GRbqD7\nxST7U8/cHtJ2IC17nxt6m76pVvevQgR1N6VUFs60r6DX3V3FFwtmSOcYF3LZnPhW\ngWo65LwzByDFQpeYuyCs/piM3WxdEn5aPl80zYshl79MRmZkMd2c4crH3U8GFz9E\n8fZiKChtskh0BhQg5xoJBHbMeXYCDr+YwwCTrIETzwELYlaon0kYb8JTeMU2rmlg\nnJmTMMQs+6rC56r7puHEVPDs/ZPWoghKwlGEg2XpKQKBgQDyfLG/9fMJFuNPkmWn\nAvkzzdJKaNvz/2KmiFwJ5DMbqtBg+reZDUdiZA1TLmDlpGC4S6//koPJQzbP1DTd\nB9k1DyJ/PNZ0DDhmDhuLengCOzQInOCDZrm6IF/TUhKKa/qnX+LjY9S96Yy9zRMn\nrCJ9ln172z6+VScvpJlr8UN5aQKBgQDmp0UsoC5H0syKV+Wj64exkJJPm+sGkJa2\nxwIH40KXJx1gREu1FNgPqzMf+j8nb86u8cpsRPPf3ZLjCXHuliv457mqrLhbVPEW\nHhrjDWMfjjQAs4FboVMgyDVDXZZZK/5FM3tBF22bxmH1zYU/wxUybjpFPpDAbhVY\nYyivCcfAqQKBgQC/qfHxUdz0zUOEjKmOddo1qTTTnchlNvJpwRRGuTnwX3ZvgRyH\nfCh1S7IAkoMCYIgWg7SsJMnH1jnH0eqq3l5AAyN4QMUdWt9lQzdgar/au6LoP99x\n3UtmI9q6NH/1K14m17KFm033gle9WhAO5o8ohz/OG0CfvrzHeqnN2RhFKQKBgGNM\nI7WgiAwXrkLosE4vec1xxetL3pSG7rtlVXR73BEin7zv6f/dJ18nfu0HWOTrd3lN\nUq3lyW/Y/gGL8Wabc/bGG+JkVUHMgbXZ5A1XmBLfr3eVz9zYyObWCkgkJDPjgqXc\nEfXl1iQ39bhScEkQ/TEmzyM8Wijdu4a/uaYRedNxAoGBAKWZCA3QGsqfMgyjPGgH\nUsxmpD1XeAVTpvjYGTcV9ERG59DceJz0rZZ7n08zGfp47Gm3Z4kztgcSAgebPOcn\nRsYsxth2+xzFvFMVmPEmbQWuXv7OrEiOZ+/DFl38pTIKyS2oEVPubbNrAWxNKocp\nHrkVfo0QgtvjiaiGZI2Dy81n\n-----END PRIVATE KEY-----\n",
+  "client_email": "fusernow-rewards-330@fusernow-rewards.iam.gserviceaccount.com",
+  "client_id": "108527456866988151678",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/fusernow-rewards-330%40fusernow-rewards.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

@@ -30,7 +30,7 @@ export const json = {
             {
                 "type": "text",
                 "name": "amazon_order_id",
-                "title": "What was your Amazon Order ID? (xxx-xxxxxxx-xxxxxxx)",
+                "title": "What was your Amazon Order ID? You can find this (xxx-xxxxxxx-xxxxxxx)",
                 "placeholder": "123-1234567-7654321",
                 "isRequired": true,
                 "validators": [
@@ -80,23 +80,29 @@ export const json = {
                 "html": 
                     "<div>We're so glad you had a positive experience! <br><br>  \
                     It would mean the world to us if you could leave a \
-                    quick Amazon seller feedback for us by clicking \
-                    <a href=https://www.amazon.com/hz/feedback?ie=UTF8&order={amazon_order_id} target=_blank>here</a>. \
+                    quick Amazon seller feedback for us by \
+                    <a style=font-weight:bold href=https://www.amazon.com/hz/feedback?ie=UTF8&order={amazon_order_id} target=_blank>clicking here</a>. \
                     We work really hard to make our customers happy, and this would really help our business! <br><br> \
                     Either way, once you finish the survey, we'll send you your $10 Amazon gift card as promised. <br><br> \
                     Thank you so much!</div>",
                 "visibleIf": "{satisfaction_rating} >= 1",
             },
             {
-                "type": "boolean",
-                "name": "checkbox",
-                "label": "I submitted seller feedback on Amazon.",
+                "type": "radiogroup",
+                "name": "submitted_feedback_radio",
+                "title": "I submitted seller feedback on Amazon",
+                "choices": [
+                    {
+                        "value": true,
+                        "text": "Yes! 😄",
+                    },
+                    {
+                        "value": false,
+                        "text": "No 😟",
+                    },
+                ],
                 "isRequired": true,
-                "visibleIf": "{satisfaction_rating} >= 1", 
-                "titleLocation": "hidden",
-                "valueTrue": "Yes",
-                "valueFalse": "No",
-                "renderAs": "checkbox"
+                "visibleIf": "{satisfaction_rating} >= 1",
             },
             {
                 "type": "comment",
@@ -112,7 +118,7 @@ export const json = {
     }
     ],
     "completeText":  "Next",
-    "completedHtml": "<h3>Thank you for your feedback!</h3>",
+    "completedHtml": "<h3>Thank you for choosing FuserNow!</h3>",
     "completedHtmlOnCondition": [],
     "showQuestionNumbers": "off"
 };
