@@ -118,7 +118,8 @@ export const json = {
     }
     ],
     "completeText":  "Next",
-    "completedHtml": "<h3>Thank you for choosing FuserNow!</h3>",
+    "completedHtml": "<h3>Thanks for filling out our survey! <br><br> You'll receive an email \
+    from us within 24 hours with your gift card. <br><br> Thank you for choosing FuserNow!</h3>",
     "completedHtmlOnCondition": [],
     "showQuestionNumbers": "off"
 };

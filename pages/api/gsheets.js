@@ -1,4 +1,5 @@
 import { google } from 'googleapis';
+const fs = require("fs");
 
 export default async function handler(req, res) {
   console.log("YOOOOOO");
@@ -9,7 +10,8 @@ export default async function handler(req, res) {
 
       // Authenticate with the Google Sheets API
       const auth = new google.auth.GoogleAuth({
-        keyFile: '/Users/jeff/Projects/fusernow-rewards/fusernow-rewards/pages/api/fusernow-rewards-1f8763ad6465.json', // Path to your JSON credentials
+        // keyFile: '/Users/jeff/Projects/fusernow-rewards/fusernow-rewards/pages/api/fusernow-rewards-1f8763ad6465.json', // Path to your JSON credentials
+        keyFile: process.env.GOOGLE_AUTH_CREDENTIALS,
         scopes: 'https://www.googleapis.com/auth/spreadsheets',
       });
 
