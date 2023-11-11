@@ -2,10 +2,8 @@ import { google } from 'googleapis';
 const fs = require("fs");
 
 export default async function handler(req, res) {
-  console.log("YOOOOOO");
   if (req.method === 'POST') {
     try {
-      console.log("req.body", req.body);
       const data  = req.body; // Your data to write to the spreadsheet
 
       // Authenticate with the Google Sheets API
@@ -32,11 +30,9 @@ export default async function handler(req, res) {
         },
       });
 
-      console.log("responseeee: ", response);
 
       res.status(200).json({ message: 'Data written successfully.' });
     } catch (error) {
-      console.error('Error writing to spreadsheet:', error);
       res.status(500).json({ error: error.message });
     }
   } else {
