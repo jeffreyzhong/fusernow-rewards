@@ -31,8 +31,7 @@ export default async function handler(req, res) {
       const spreadsheetId = "1EUpEUUJR1VFeTMJxr8qTdELglJnaRVsyIKl5YD4AsGk"; // The ID of your spreadsheet
 
       // Write to the spreadsheet
-      const response = googleSheets.spreadsheets.values.append(
-        callback=gsheet_callback,
+      const response = await googleSheets.spreadsheets.values.append(
         {
           auth,
           spreadsheetId,
@@ -54,9 +53,4 @@ export default async function handler(req, res) {
     res.setHeader('Allow', ['POST']);
     res.status(405).end(`Method ${req.method} Not Allowed`);
   }
-}
-
-function gsheet_callback() {
-  console.log("callback");
-  console.log()
 }
