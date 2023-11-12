@@ -33,6 +33,7 @@ export default async function handler(req, res) {
 
       res.status(200).json({ message: 'Data written successfully.' });
     } catch (error) {
+      console.log("ERROR: ", error, " AND: ", error.message);
       res.status(500).json({ error: error.message });
     }
   } else {
