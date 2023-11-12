@@ -7,10 +7,16 @@ export default async function handler(req, res) {
       console.log("ATTEMPT")
       const data  = req.body; // Your data to write to the spreadsheet
 
+      const credential = JSON.parse(
+        Buffer.from(process.env.GOOGLE_AUTH_CREDENTIALS, "base64").toString().replace(/\n/g,"")
+      );      
+
       // Authenticate with the Google Sheets API
       const auth = new google.auth.GoogleAuth({
-        // keyFile: '/Users/jeff/Projects/fusernow-rewards/fusernow-rewards/pages/api/fusernow-rewards-1f8763ad6465.json', // Path to your JSON credentials
-        keyFile: process.env.GOOGLE_AUTH_CREDENTIALS,
+        credentials: {
+          client_email: credential.client_email,
+          private_key: credential.private_key,
+        },
         scopes: 'https://www.googleapis.com/auth/spreadsheets',
       });
 
