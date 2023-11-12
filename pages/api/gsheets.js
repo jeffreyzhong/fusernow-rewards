@@ -4,6 +4,7 @@ const fs = require("fs");
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     try {
+      console.log("ATTEMPT")
       const data  = req.body; // Your data to write to the spreadsheet
 
       // Authenticate with the Google Sheets API
@@ -29,6 +30,7 @@ export default async function handler(req, res) {
           values: data, // Each sub-array is a row and each element is a cell
         },
       });
+      console.log("response: ", response)
 
 
       res.status(200).json({ message: 'Data written successfully.' });
