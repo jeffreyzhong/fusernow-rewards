@@ -11,8 +11,12 @@ export default async function handler(req, res) {
         Buffer.from(process.env.GOOGLE_AUTH_CREDENTIALS, "base64").toString().replace(/\n/g,"")
       );      
 
+      console.log("email: ", credential.client_email);
+      console.log("private key: ", credential.private_key);
+
       // Authenticate with the Google Sheets API
       const auth = new google.auth.GoogleAuth({
+        projectId: "fusernow-rewards",
         credentials: {
           client_email: credential.client_email,
           private_key: credential.private_key,
@@ -27,13 +31,15 @@ export default async function handler(req, res) {
       const spreadsheetId = "1EUpEUUJR1VFeTMJxr8qTdELglJnaRVsyIKl5YD4AsGk"; // The ID of your spreadsheet
 
       // Write to the spreadsheet
-      const response = googleSheets.spreadsheets.values.append({
-        auth,
-        spreadsheetId,
-        range: 'Sheet1', // Change Sheet1 if your worksheet's name is different
-        valueInputOption: 'USER_ENTERED',
-        resource: {
-          values: data, // Each sub-array is a row and each element is a cell
+      const response = googleSheets.spreadsheets.values.append(
+        callback=gsheet_callback,
+        {
+          auth,
+          spreadsheetId,
+          range: 'Sheet1', // Change Sheet1 if your worksheet's name is different
+          valueInputOption: 'USER_ENTERED',
+          resource: {
+            values: data, // Each sub-array is a row and each element is a cell
         },
       });
       console.log("response: ", response)
@@ -48,4 +54,9 @@ export default async function handler(req, res) {
     res.setHeader('Allow', ['POST']);
     res.status(405).end(`Method ${req.method} Not Allowed`);
   }
+}
+
+function gsheet_callback() {
+  console.log("callback");
+  console.log()
 }
