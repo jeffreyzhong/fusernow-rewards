@@ -15,10 +15,10 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" sizes="any"/>  
         </Head>
         <main className={styles.main}>
-            <div>
+            {/* <div width="30%" height="auto" text_align="center"> */}
               <img id="fuser_now_logo" src="fuser_now_logo.png" alt="FuserNow Logo" width="30%" height="auto" text_align="center"></img>
               <SurveyComponent></SurveyComponent>
-            </div>
+            {/* </div> */}
         </main> 
         <footer className={styles.footer}>
           <div className={styles.copyright}>
