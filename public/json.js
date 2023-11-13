@@ -30,7 +30,7 @@ export const json = {
             {
                 "type": "text",
                 "name": "amazon_order_id",
-                "title": "What was your Amazon Order ID? You can find this (xxx-xxxxxxx-xxxxxxx)",
+                "title": "What was your Amazon Order ID? You can find this by going to your order history on Amazon or on your order confirmation email and looking for the ID in 3-7-7 (xxx-xxxxxxx-xxxxxxx) format. It should be all numbers and no letters.",
                 "placeholder": "123-1234567-7654321",
                 "isRequired": true,
                 "validators": [

@@ -16,7 +16,7 @@ export default function Home() {
         </Head>
         <main className={styles.main}>
             <div>
-              <img id="fuser_now_logo" src="fuser_now_logo.png" alt="FuserNow Logo" width="50%" height="auto" text_align="center"></img>
+              <img id="fuser_now_logo" src="fuser_now_logo.png" alt="FuserNow Logo" width="30%" height="auto" text_align="center"></img>
               <SurveyComponent></SurveyComponent>
             </div>
         </main> 

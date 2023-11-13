@@ -4,17 +4,12 @@ const fs = require("fs");
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     try {
-      console.log("ATTEMPT")
-      const data  = req.body; // Your data to write to the spreadsheet
+      const data  = req.body;
 
       const credential = JSON.parse(
         Buffer.from(process.env.GOOGLE_AUTH_CREDENTIALS, "base64").toString().replace(/\n/g,"")
       );      
 
-      console.log("email: ", credential.client_email);
-      console.log("private key: ", credential.private_key);
-
-      // Authenticate with the Google Sheets API
       const auth = new google.auth.GoogleAuth({
         projectId: "fusernow-rewards",
         credentials: {
@@ -28,25 +23,21 @@ export default async function handler(req, res) {
 
       const googleSheets = google.sheets({ version: 'v4', auth: client });
 
-      const spreadsheetId = "1EUpEUUJR1VFeTMJxr8qTdELglJnaRVsyIKl5YD4AsGk"; // The ID of your spreadsheet
+      const spreadsheetId = "1EUpEUUJR1VFeTMJxr8qTdELglJnaRVsyIKl5YD4AsGk";
 
-      // Write to the spreadsheet
       const response = await googleSheets.spreadsheets.values.append(
         {
           auth,
           spreadsheetId,
-          range: 'Sheet1', // Change Sheet1 if your worksheet's name is different
+          range: 'Sheet1',
           valueInputOption: 'USER_ENTERED',
           resource: {
-            values: data, // Each sub-array is a row and each element is a cell
+            values: data,
         },
       });
-      console.log("response: ", response)
-
 
       res.status(200).json({ message: 'Data written successfully.' });
     } catch (error) {
-      console.log("ERROR: ", error, " AND: ", error.message);
       res.status(500).json({ error: error.message });
     }
   } else {
