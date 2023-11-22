@@ -11,7 +11,7 @@ function SurveyComponent() {
     survey.applyTheme(themeJson);
     survey.onComplete.add(async function(sender, options) {
         try {
-            const keys = ["first_last_name", "order_email", "amazon_order_id", "satisfaction_rating", "submitted_feedback_radio", "bad_feedback"]
+            const keys = ["amazon_order_id", "order_date", "sent_gift_card", "survey_submission_date", "satisfaction_rating", "submitted_feedback_radio", "bad_feedback"]
             var answers_dict = {};
             const survey_keys = Object.keys(survey.data);
             for (const key of keys) {
@@ -54,6 +54,15 @@ function SurveyComponent() {
                     } else {
                         answers_dict[key] = survey.data[key];
                     }
+                } else if (key === "survey_submission_date") {
+                    var currentDate = new Date();
+                    var options = { year: 'numeric', month: 'numeric', day: 'numeric' };
+                    const currentDateString = currentDate.toLocaleDateString('en-US', options);
+                    answers_dict[key] = currentDateString;
+                } else if (key === "order_date") {
+                    answers_dict[key] = "ADD ORDER DATE MANUALLY"
+                } else if (key === "sent_gift_card") {
+                  answers_dict[key] = null;  
                 } else {
                     answers_dict[key] = "None";
                 }

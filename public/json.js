@@ -1,32 +1,11 @@
 export const json = {
     "checkErrorsMode": "onValueChanged",
     "title": "FuserNow Rewards Survey",
-    "description": "Fill out this survey to get your $10 Amazon gift card!",
+    "description": "Fill out this survey within 90 days of purchase to get your $10 Amazon gift card!",
     "pages": [
         {
         "name": "page1",
         "elements": [
-            {
-                "type": "text",
-                "name": "first_last_name",
-                "title": "What name was the order under?",
-                "placeholder": "John Smith",
-                "isRequired": true,
-            },
-            {
-                "type": "text",
-                "name": "order_email",
-                "title": "What email was the order under?",
-                "placeholder": "jsmith@gmail.com",
-                "isRequired": true,
-                "validators": [
-                    {
-                        "type": "regex",
-                        "text": "Your email address is invalid.",
-                        "regex": ".+@.+\\..+",
-                    }
-                ]
-            },
             {
                 "type": "text",
                 "name": "amazon_order_id",
@@ -44,7 +23,7 @@ export const json = {
             {
                 "type": "radiogroup",
                 "name": "satisfaction_rating",
-                "title": "How would you rate your order and overall experience? Don't worry, we'll send you your $10 Amazon gift card either way 😄.",
+                "title": "How would you rate your order and overall experience? Regardless of your answer, we'll send you your $10 Amazon gift card 😄.",
                 "isRequired": true,
                 "choices": [
                     {
@@ -78,12 +57,16 @@ export const json = {
                 "type": "html",
                 "name": "amazon_feedback_link",
                 "html": 
-                    "<div>We're so glad you had a positive experience! <br><br>  \
+                    "<div\">We're so glad you had a positive experience! <br><br>  \
                     It would mean the world to us if you could leave a \
-                    quick Amazon seller feedback for us by \
-                    <a style=font-weight:bold href=https://www.amazon.com/hz/feedback?ie=UTF8&order={amazon_order_id} target=_blank>clicking here</a>. \
-                    We work really hard to make our customers happy, and this would really help our business! <br><br> \
-                    Either way, once you finish the survey, we'll send you your $10 Amazon gift card as promised. <br><br> \
+                    quick Amazon seller feedback for us by clicking here: <br><br> \
+                    <button style=\"background-color: #2659c0; color: white; padding: 15px 25px; border: none; border-radius: 2px; cursor: pointer;\" \
+                        onmouseover=\"this.style.backgroundColor='#1c49a5';\" \
+                        onmouseout=\"this.style.backgroundColor='#2659c0';\" \
+                        onclick=\"window.open('https://www.amazon.com/hz/feedback?ie=UTF8&order={amazon_order_id}', '_blank');\">Leave Feedback\
+                    </button> \
+                    <br> We work really hard to make our customers happy, and this would really help our business! <br><br> \
+                    Either way, once you finish this survey, we'll send you your $10 Amazon gift card as promised. <br><br> \
                     Thank you so much!</div>",
                 "visibleIf": "{satisfaction_rating} >= 1",
             },

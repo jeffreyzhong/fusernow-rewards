@@ -29,7 +29,7 @@ export default async function handler(req, res) {
         {
           auth,
           spreadsheetId,
-          range: 'Sheet1',
+          range: 'FuserNow Survey Tracker',
           valueInputOption: 'USER_ENTERED',
           resource: {
             values: data,
