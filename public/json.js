@@ -8,6 +8,27 @@ export const json = {
         "elements": [
             {
                 "type": "text",
+                "name": "first_last_name",
+                "title": "What's your name?",
+                "placeholder": "John Smith",
+                "isRequired": true,
+            },
+            {
+                "type": "text",
+                "name": "order_email",
+                "title": "What's your email?",
+                "placeholder": "jsmith@gmail.com",
+                "isRequired": true,
+                "validators": [
+                    {
+                        "type": "regex",
+                        "text": "Your email address is invalid.",
+                        "regex": ".+@.+\\..+",
+                    }
+                ]
+            },
+            {
+                "type": "text",
                 "name": "amazon_order_id",
                 "title": "What was your Amazon Order ID? You can find this by going to your order history on Amazon or on your order confirmation email and looking for the ID in 3-7-7 (xxx-xxxxxxx-xxxxxxx) format. It should be all numbers and no letters.",
                 "placeholder": "123-1234567-7654321",
