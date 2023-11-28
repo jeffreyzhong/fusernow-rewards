@@ -1,7 +1,7 @@
 export const json = {
     "checkErrorsMode": "onValueChanged",
     "title": "FuserNow Rewards Survey",
-    "description": "Fill out this survey within 90 days of purchase to get your $10 Amazon gift card!",
+    "description": "From all of us at FuserNow, thank you for entrusting us with your printing needs. Fill out this survey within 90 days of purchase to get your $10 Amazon gift card!",
     "pages": [
         {
         "name": "page1",
@@ -79,8 +79,9 @@ export const json = {
                 "name": "amazon_feedback_link",
                 "html": 
                     "<div\">We're so glad you had a positive experience! <br><br>  \
-                    It would mean the world to us if you could leave a \
-                    quick Amazon seller feedback for us by clicking here: <br><br> \
+                    It would mean a lot to us if you could leave us some seller feedback \
+                    on Amazon. <br><br> You can do so by finding your order from us under your Amazon orders > \"View order details\" > \"Leave seller feedback\" \
+                    or click here: <br><br> \
                     <button style=\"background-color: #2659c0; color: white; padding: 15px 25px; border: none; border-radius: 2px; cursor: pointer;\" \
                         onmouseover=\"this.style.backgroundColor='#1c49a5';\" \
                         onmouseout=\"this.style.backgroundColor='#2659c0';\" \
@@ -94,7 +95,7 @@ export const json = {
             {
                 "type": "radiogroup",
                 "name": "submitted_feedback_radio",
-                "title": "I submitted seller feedback on Amazon",
+                "title": "I submitted seller feedback on Amazon.",
                 "choices": [
                     {
                         "value": true,
