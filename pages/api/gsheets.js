@@ -29,7 +29,7 @@ export default async function handler(req, res) {
         {
           auth,
           spreadsheetId,
-          range: 'FuserNow Survey Tracker',
+          range: 'CARTRA Survey Tracker',
           valueInputOption: 'USER_ENTERED',
           resource: {
             values: data,
